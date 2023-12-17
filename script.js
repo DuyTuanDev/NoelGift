@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    
+    var audio = new Audio('nhac.m4a');
+    audio.loop = true;
+    audio.play();
     $('.nameId').hide();
     $('.origin').hide();
     $('.tree10').hide();
@@ -55,20 +57,20 @@ function clickShow(){
     
     $('.star').delay(8000).fadeIn();
     
-    $('.ball1').delay(8500).fadeIn();
-    $('.ball2').delay(9500).fadeIn();
-    $('.ball3').delay(10000).fadeIn();
-    $('.ball4').delay(10500).fadeIn();
-    $('.ball5').delay(11000).fadeIn();
-    $('.ball6').delay(11500).fadeIn();
-    $('.ball7').delay(12000).fadeIn();
-    $('.ball8').delay(12500).fadeIn();
-    $('.ball9').delay(13000).fadeIn();
-    $('.ball10').delay(13500).fadeIn();
-    $('.ball11').delay(14000).fadeIn();
-    $('.star').delay(14500).fadeIn();
+    $('.ball1').delay(8300).fadeIn();
+    $('.ball2').delay(8600).fadeIn();
+    $('.ball3').delay(8900).fadeIn();
+    $('.ball4').delay(9200).fadeIn();
+    $('.ball5').delay(9500).fadeIn();
+    $('.ball6').delay(9700).fadeIn();
+    $('.ball7').delay(10000).fadeIn();
+    $('.ball8').delay(10300).fadeIn();
+    $('.ball9').delay(10600).fadeIn();
+    $('.ball10').delay(10900).fadeIn();
+    $('.ball11').delay(11200).fadeIn();
+    $('.star').delay(11500).fadeIn();
     
-    $('#welcomePopup').delay(17000).fadeIn();
+    $('#welcomePopup').delay(14000).fadeIn();
 }
 function opentGift(){
     let valueNameCheck = document.getElementById("inputName").value;
