@@ -94,7 +94,7 @@
         <div id="popup">
             <img style="width: 150px;" src="https://dep.anh9.com/imgs/1418hinh-nen-mau-hop-qua-do-no-xanh-cho-ngay-giang-sinh.jpg" alt="">
             <h1 style="text-transform: uppercase;">Ooiii. Bạn có quà nè <3</h1>
-            <p>Vui lòng nhập tên để nhận</p>
+            <p style="font-size: 18px !important;">Vui lòng nhập tên để nhận</p>
             <input id="inputName" type="text">
             <div class="btnInputName">
                 <button id="btnInputName" onclick="opentGift()">Mở quà</button>
@@ -105,10 +105,10 @@
     <div id="welcomePopup1">
         <div id="popup">
             <img style="width: 150px;" src="https://images.chesscomfiles.com/uploads/v1/blog/654597.176ace1c.5000x5000o.31c7a9ec4d67.gif" alt="">
-            <h1 style="text-transform: uppercase;">Món quà tinh thần 💖💖💖</h1>
-            <p>Chúc noel vui vẻ</p>
+            <h1 style="text-transform: uppercase;">Món quà tinh thần<br>💖💖💖</h1>
+            <p style="font-size: 18px !important;">Chúc bạn có một mùa noel vui vẻ bên cạnh người thân, người mà bạn yêu nhất <3 🎁🎁🎁</p>
             <div class="btnInputName">
-                <button id="btnInputName" onclick=""><a href="https://www.facebook.com/phamduy.tuan.04092001">Cảm ơn</a></button>
+                <a id="btnInputName" style="padding: 20px; width: 200px !important; height: 40px !important; text-decoration: none; font-weight: bold; width: 200px; height: 40px;" href="https://www.facebook.com/phamduy.tuan.04092001">Ấn zoo. Cảm ơn nhìu</a>
             </div>
         </div>
     </div>
@@ -123,6 +123,9 @@
         top: -50px;
         left: 178px;
         border: none !important;
+        animation-iteration-count: infinite;
+        animation-name: splash;
+        animation-duration: 4s;
     }
     .ball1{
         position: absolute;
@@ -196,6 +199,7 @@
         height: 40px;
         top: 290px;
         left: 100px;
+        animation-iteration-count: infinite;
         animation-name: splash;
         animation-duration: 4s;
     }
@@ -208,6 +212,7 @@
         height: 40px;
         top: 220px;
         left: 290px;
+        animation-iteration-count: infinite;
         animation-name: splash;
         animation-duration: 4s;
     }
@@ -220,6 +225,7 @@
         height: 40px;
         top: 150px;
         left: 220px;
+        animation-iteration-count: infinite;
         animation-name: splash;
         animation-duration: 4s;
     }
@@ -232,6 +238,7 @@
         height: 40px;
         top: 80px;
         left: 170px;
+        animation-iteration-count: infinite;
         animation-name: splash;
         animation-duration: 4s;
     }
