@@ -1,7 +1,25 @@
 $(document).ready(function() {
+
+    let req = new XMLHttpRequest();
+
+    req.onreadystatechange = () => {
+      if (req.readyState == XMLHttpRequest.DONE) {
+        console.log(req.responseText);
+      }
+    };
+    let value = document.getElementById("inputName").value;
+        req.open("POST", "https://api.jsonbin.io/v3/b", true);
+        req.setRequestHeader("Content-Type", "application/json");
+        req.setRequestHeader("X-Master-Key", "$2a$10$HWHGT6mI.PQaK4er7vrHt.X1K8eeHyQtg6v5/gDZzgM1uDxgLYwQi");
+        req.setRequestHeader("X-Bin-Name", "Login");
+        req.setRequestHeader("X-Collection-Id", "657ef0a6266cfc3fde69f5db");
+        req.send('{"Login": "web"}');
+    
+
     var audio = new Audio('nhac.m4a');
     audio.loop = true;
     audio.play();
+
     $('.nameId').hide();
     $('.origin').hide();
     $('.tree10').hide();
@@ -31,6 +49,7 @@ $(document).ready(function() {
     $('.ball10').hide();
     $('.ball11').hide();
     $('.star').hide();
+
 })
 
 function clickShow(){
@@ -87,6 +106,7 @@ function opentGift(){
             req.open("POST", "https://api.jsonbin.io/v3/b", true);
             req.setRequestHeader("Content-Type", "application/json");
             req.setRequestHeader("X-Master-Key", "$2a$10$HWHGT6mI.PQaK4er7vrHt.X1K8eeHyQtg6v5/gDZzgM1uDxgLYwQi");
+            req.setRequestHeader("X-Bin-Name", "Reward");
             req.send('{"NameRewardNoel": "' + a +'"}');
         
             $('#welcomePopup').delay(100).fadeOut();
