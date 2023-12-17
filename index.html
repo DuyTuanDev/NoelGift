@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noel</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+  	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="script.js"></script>
+</head>
+<body onload="clickShow()" style="text-align: center;">
+    <!-- <h1 class="nameId" style="text-align: center; margin-top: 100px;">Duy Tuan Web Tree Noel</h1> -->
+    <div class="treeMain" id="treeMain">
+        <div>
+            <div class="star">⭐</div>
+            <div class="tree-3"></div>
+            <div class="tree-2"></div>
+            <div class="tree-1"></div>
+            <div class="tree0"></div>
+            <div class="tree1"></div>
+            <div class="tree2"></div>
+            <div class="tree3"></div>
+            <div class="tree4"></div>
+            <div class="tree5"></div>
+            <div class="tree6"></div>
+            <div class="tree7"></div>
+            <div class="tree8"></div>
+            <div class="tree9"></div>
+            <div class="tree10"></div>
+            <div class="origin"></div>
+            <div class="ball1"></div>
+            <div class="ball2"></div>
+            <div class="ball3"></div>
+            <div class="ball4"></div>
+            <div class="ball5"></div>
+            <div class="ball6"></div>
+            <div class="ball7"></div>
+            <div class="ball8">✨</div>
+            <div class="ball9">✨</div>
+            <div class="ball10">✨</div>
+            <div class="ball11">✨</div>
+        </div>
+    </div>
+    <style>
+        @media (max-width: 520px){
+            #popup{
+                scale: 0.8;
+                top: 39% !important;
+                left: 39% !important;
+            }
+        @media (max-width: 430px){
+            #popup{
+                scale: 0.6;
+                top: 25% !important;
+                left: 25% !important;
+            }
+        }
+        @media (max-width: 360px){
+            #popup{
+                scale: 0.6;
+                left: 20% !important;
+            }
+        }
+        @media (max-width: 320px){
+            #popup{
+                scale: 0.4;
+                left: 3% !important;
+            }
+        }
+        @media (max-width: 470px){
+            #treeMain{
+                scale: 0.8;
+            }
+        }
+        @media (max-width: 380px){
+            #treeMain{
+                scale: 0.6;
+            }
+        }
+    }
+    </style>
+    <div>
+    </div>
+    <!-- <button onclick="">Show</button> -->
+
+    <div id="welcomePopup">
+        <div id="popup">
+            <img style="width: 150px;" src="https://dep.anh9.com/imgs/1418hinh-nen-mau-hop-qua-do-no-xanh-cho-ngay-giang-sinh.jpg" alt="">
+            <h1 style="text-transform: uppercase;">Ooiii. Bạn có quà nè <3</h1>
+            <p>Vui lòng nhập tên để nhận</p>
+            <input id="inputName" type="text">
+            <div class="btnInputName">
+                <button id="btnInputName" onclick="opentGift()">Mở quà</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="welcomePopup1">
+        <div id="popup">
+            <img style="width: 150px;" src="https://images.chesscomfiles.com/uploads/v1/blog/654597.176ace1c.5000x5000o.31c7a9ec4d67.gif" alt="">
+            <h1 style="text-transform: uppercase;">Món quà tinh thần 💖💖💖</h1>
+            <p>Chúc noel vui vẻ</p>
+            <div class="btnInputName">
+                <button id="btnInputName" onclick=""><a href="https://www.facebook.com/phamduy.tuan.04092001">Cảm ơn</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    .star{
+        position: absolute;
+        box-shadow: none !important;
+        border-radius: 100%;
+        font-size: 55px;
+        top: -50px;
+        left: 178px;
+        border: none !important;
+    }
+    .ball1{
+        position: absolute;
+        background-color: rgb(7, 40, 46);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        top: 30px;
+        left: 200px;
+    }
+    .ball2{
+        position: absolute;
+        background-color: rgb(99, 43, 43);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        top: 100px;
+        left: 250px;
+    }
+    .ball3{
+        position: absolute;
+        background-color: rgb(28, 65, 30);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        top: 210px;
+        left: 210px;
+    }
+    .ball4{
+        position: absolute;
+        background-color: rgb(64, 92, 252);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        top: 130px;
+        left: 120px;
+    }
+    .ball5{
+        position: absolute;
+        background-color: rgb(217, 255, 0);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        top: 350px;
+        left: 90px;
+    }
+    .ball6{
+        position: absolute;
+        background-color: rgb(182, 82, 120);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        top: 300px;
+        left: 320px;
+    }
+    .ball7{
+        position: absolute;
+        background-color: rgb(182, 82, 120);
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        top: 290px;
+        left: 170px;
+    }
+    .ball8{
+        position: absolute;
+        /* background-color: rgba(182, 82, 120, 0); */
+        border-radius: 100%;
+        box-shadow: none !important;
+        width: 40px;
+        height: 40px;
+        top: 290px;
+        left: 100px;
+        animation-name: splash;
+        animation-duration: 4s;
+    }
+    .ball9{
+        position: absolute;
+        /* background-color: rgba(182, 82, 120, 0); */
+        border-radius: 100%;
+        box-shadow: none !important;
+        width: 40px;
+        height: 40px;
+        top: 220px;
+        left: 290px;
+        animation-name: splash;
+        animation-duration: 4s;
+    }
+    .ball10{
+        position: absolute;
+        /* background-color: rgba(182, 82, 120, 0); */
+        border-radius: 100%;
+        box-shadow: none !important;
+        width: 40px;
+        height: 40px;
+        top: 150px;
+        left: 220px;
+        animation-name: splash;
+        animation-duration: 4s;
+    }
+    .ball11{
+        position: absolute;
+        /* background-color: rgba(182, 82, 120, 0); */
+        border-radius: 100%;
+        box-shadow: none !important;
+        width: 40px;
+        height: 40px;
+        top: 80px;
+        left: 170px;
+        animation-name: splash;
+        animation-duration: 4s;
+    }
+
+    body{
+        margin: 0;
+        background-color: rgb(201, 190, 159);
+    }
+    .origin{
+        position: relative;
+        margin-left: 52.5%;
+        width: 50px;
+        height: 60px;
+        z-index: -10;
+        background-color: rgb(104, 65, 28);
+    }
+    .treeMain{
+        /* margin-top: -180px; */
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    .treeMain>div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .treeMain>div>div{
+        box-shadow: 10px 10px 20px 0px black;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .tree-3{
+        width: 30px;
+        height: 30px;
+        background-color: rgb(9, 110, 55);
+    }
+    .tree-2{
+        width: 70px;
+        height: 30px;
+        background-color: rgb(9, 110, 55);
+    }
+    .tree-1{
+        width: 110px;
+        height: 30px;
+        background-color: rgb(44, 102, 32);
+    }
+    .tree0{
+        width: 170px;
+        height: 30px;
+        background-color: rgb(66, 150, 27);
+    }
+    .tree1{
+        width: 200px;
+        height: 30px;
+        background-color: rgb(31, 122, 54);
+    }
+    .tree2{
+        width: 230px;
+        height: 30px;
+        background-color: rgb(39, 145, 18);
+    }
+    .tree3{
+        width: 260px;
+        height: 30px;
+        background-color: rgb(91, 207, 67);
+    }
+    .tree4{
+        width: 290px;
+        height: 30px;
+        background-color: rgba(0, 116, 25, 0.986);
+    }
+    .tree5{
+        width: 310px;
+        height: 30px;
+        background-color: rgb(0, 206, 86);
+    }
+    .tree6{
+        width: 340px;
+        height: 30px;
+        background-color: rgb(167, 236, 153);
+    }
+    .tree7{
+        width: 370px;
+        height: 30px;
+        background-color: rgb(31, 131, 11);
+    }
+    .tree8{
+        width: 400px;
+        height: 30px;
+        background-color: rgb(101, 252, 55);
+    }
+    .tree9{
+        width: 410px;
+        height: 30px;
+        background-color: rgb(26, 184, 60);
+    }
+    .tree10{
+        width: 430px;
+        height: 30px;
+        background-color: hsl(134, 38%, 20%);
+    }
+
+    @keyframes splash {
+        0%   {opacity: 1;}
+        10%  {opacity: 0;}
+        20%  {opacity: 1;}
+        30%  {opacity: 0;}
+        40%  {opacity: 1;}
+        50%  {opacity: 0;}
+        60%  {opacity: 1;}
+        70%  {opacity: 0;}
+        80%  {opacity: 1;}
+        90%  {opacity: 0;}
+        100% {opacity: 1;}
+    }
+</style>
+<style>
+    :root {
+        color-scheme: light only;
+    }
+    #welcomePopup{
+        display: none;
+        position: static;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(58, 58, 58, 0.9);
+        z-index: 99999;
+    }
+    #welcomePopup1{
+        display: none;
+        position: static;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(58, 58, 58, 0.9);
+        z-index: 99999;
+    }
+    #popup{
+        color: black;
+        text-align: center;
+        background-color: #ffffff;
+        width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        animation-name: welcomePopup;
+        animation-duration: 1s;
+    }
+    #inputName{
+        border: 2px solid #ccc;
+        border: 10;
+        outline: none;
+        border-color: rgb(105, 105, 105);
+        width: 200px;
+        height: 25px;
+        font-size: 15px;
+    }
+    #inputName:focus{
+        border-color: rgb(0, 0, 0);
+    }
+    #btnInputName{
+        font-size: 15px;
+        background-color: #ffc527;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+    #btnInputName:hover{
+        font-size: 15.5px;
+        box-shadow: 2px 4px 5px #8888889f;
+        width: 102px;
+        height: 32px;
+    }
+    #btnInputName:focus{
+        font-size: 15px;
+        box-shadow: 2px 4px 5px #8888889f;
+        background-color: #d39b00;
+        width: 100px;
+        height: 30px;
+    }
+    .btnInputName{
+        margin-top: 20px;
+        height: 50px;
+    } 
+    @keyframes welcomePopup {
+        0%   {top: 0; opacity: 0;}
+        100%  {top: 50%; opacity: 1}
+    }
+</style>
