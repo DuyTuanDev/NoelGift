@@ -19,8 +19,8 @@
     <!-- <h1 class="nameId" style="text-align: center; margin-top: 100px;">Duy Tuan Web Tree Noel</h1> -->
     <div class="treeMain" id="treeMain">
         <div>
-            <div class="star">⭐</div>
-            <div class="tree-3"></div>
+            
+            <div class="tree-3"><div class="star">⭐</div></div>
             <div class="tree-2"></div>
             <div class="tree-1"></div>
             <div class="tree0"></div>
@@ -70,8 +70,14 @@
         }
         @media (max-width: 320px){
             #popup{
-                scale: 0.4;
-                left: 3% !important;
+                scale: 0.5;
+                left: 10% !important;
+            }
+        }
+        @media (max-width: 280px){
+            #popup{
+                scale: 0.5;
+                left: 5% !important;
             }
         }
         @media (max-width: 470px){
@@ -93,11 +99,11 @@
     <div id="welcomePopup">
         <div id="popup">
             <img style="width: 150px;" src="https://dep.anh9.com/imgs/1418hinh-nen-mau-hop-qua-do-no-xanh-cho-ngay-giang-sinh.jpg" alt="">
-            <h1 style="text-transform: uppercase;">Ooiii. Bạn có quà nè <3</h1>
+            <h1 style="text-transform: uppercase;">Oii Trời <br> Bạn có quà nè <3</h1>
             <p style="font-size: 18px !important;">Vui lòng nhập tên để nhận</p>
             <input id="inputName" type="text">
             <div class="btnInputName">
-                <button id="btnInputName" onclick="opentGift()">Mở quà</button>
+                <button style="font-size: 18px !important;" id="btnInputName" onclick="opentGift()">Mở quà</button>
             </div>
         </div>
     </div>
@@ -246,6 +252,7 @@
     body{
         margin: 0;
         background-color: rgb(201, 190, 159);
+        width: 100%;
     }
     .origin{
         position: relative;
@@ -395,9 +402,10 @@
         border: 10;
         outline: none;
         border-color: rgb(105, 105, 105);
-        width: 200px;
-        height: 25px;
+        width: 300px;
+        height: 40px;
         font-size: 15px;
+        font-size: 18px;
     }
     #inputName:focus{
         border-color: rgb(0, 0, 0);
@@ -405,8 +413,8 @@
     #btnInputName{
         font-size: 15px;
         background-color: #ffc527;
-        width: 100px;
-        height: 30px;
+        width: 150px;
+        height: 50px;
         border-radius: 10px;
         border: none;
         cursor: pointer;
@@ -414,19 +422,19 @@
     #btnInputName:hover{
         font-size: 15.5px;
         box-shadow: 2px 4px 5px #8888889f;
-        width: 102px;
-        height: 32px;
+        width: 150px;
+        height: 50px;
     }
-    #btnInputName:focus{
+    /* #btnInputName:focus{
         font-size: 15px;
         box-shadow: 2px 4px 5px #8888889f;
         background-color: #d39b00;
         width: 100px;
         height: 30px;
-    }
+    } */
     .btnInputName{
         margin-top: 20px;
-        height: 50px;
+        height: 80px;
     } 
     @keyframes welcomePopup {
         0%   {top: 0; opacity: 0;}
